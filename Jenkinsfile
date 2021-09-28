@@ -10,6 +10,8 @@ pipeline {
         stage('test') {
             steps {
             echo 'my test'
+            workspace = env.WORKSPACE
+            echo "Current workspace is $WORKSPACE"  
             }
         }    
     }
